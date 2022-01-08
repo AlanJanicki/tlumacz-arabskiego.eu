@@ -8,4 +8,207 @@
 
 body {
   font-family: "Lato", Arial, sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: grid;
+  background-color: #222;
+}
+.header__logo {
+  display: block;
+  margin: 10px 0 20px 15px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  color: #fed136;
+  font-family: "Kaushan Script", cursive;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+.header__button {
+  grid-column: 11/12;
+  width: 45px;
+  height: 35px;
+  margin: 10px 0 0 10px;
+  padding-top: 6px;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #fed136;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: -210px;
+  grid-column: 1/12;
+  width: 100%;
+  height: 210px;
+  background-color: #222;
+  border-top: 1px solid gray;
+}
+.menu__link {
+  display: block;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px 0 0 15px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.welcome {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  height: 40vh;
+  background-image: url(../assets/img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 40% center;
+}
+.welcome__title {
+  padding-top: 40px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.welcome__subtitle {
+  padding-top: 20px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 3.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.welcome__button {
+  justify-self: center;
+  margin-top: 20px;
+  width: 60%;
+  height: 50px;
+  background-color: #fed136;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.info {
+  display: grid;
+  justify-items: center;
+  padding-bottom: 40px;
+}
+.info__image {
+  margin: 20px 0;
+}
+.info__description {
+  width: 90%;
+}
+.info__text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+.info__text--strong {
+  font-weight: 700;
+}
+.info__subtitle {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-align: justify;
+  text-transform: uppercase;
+}
+.info--dark {
+  background-color: #f7f7f7;
+}
+
+.heading__title {
+  padding-top: 40px;
+  color: #333;
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.heading__subtitle {
+  padding-top: 10px;
+  color: #777;
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.benefits__item {
+  display: grid;
+  justify-items: center;
+  margin: 40px 0;
+}
+.benefits__icon {
+  width: 100px;
+  height: 100px;
+  padding-top: 20px;
+  border-radius: 50%;
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  background-color: #fed136;
+}
+.benefits__title {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+.benefits__text {
+  margin-top: 10px;
+  color: #777;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: center;
+}
+
+.contact {
+  height: 55vh;
+  background-color: #222;
+  background-image: url(../assets/img/map-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contact__item {
+  display: grid;
+  justify-items: center;
+  margin: 40px 0;
+}
+.contact__icon {
+  color: #fff;
+  font-size: 2.8rem;
+}
+.contact__text {
+  padding-top: 20px;
+  color: #fed136;
+}
+
+.heading__title--light {
+  color: #fff;
+}
+
+.footer {
+  text-align: center;
+}
+.footer__text {
+  font-size: 0.8rem;
+  line-height: 1.6;
 }/*# sourceMappingURL=style.css.map */
