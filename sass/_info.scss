@@ -1,32 +1,43 @@
+@import 'mixins';
+
 .info {
-  display: grid;
-  justify-items: center;
-  padding-bottom: 40px;
+  &-inner {
+    display: grid;
+    gap: 5vh;
+    justify-items: center;
+    margin: 0 auto;
+    padding-bottom: 5vh;
+    max-width: 1400px;
 
-  &__image {
-    margin: 20px 0;
-  }
+    @include mq('lg') {
+      grid-template-columns: 1fr 1fr;
+    }
 
-  &__description {
-    width: 90%;
-  }
+    &__description {
+      width: 90%;
 
-  &__text {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    text-align: justify;
-  }
+      @include mq('lg') {
+        justify-self: start;
+      }
+    }
 
-  &__text--strong {
-    font-weight: 700;
-  }
+    &__text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
 
-  &__subtitle {
-    margin: 10px 0;
-    font-size: 1.3rem;
-    line-height: 1.5;
-    text-align: justify;
-    text-transform: uppercase;
+    &__text--strong {
+      font-weight: 700;
+    }
+
+    &__subtitle {
+      margin: 10px 0;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      text-align: justify;
+      text-transform: uppercase;
+    }
   }
 
   &--dark {
@@ -35,18 +46,22 @@
 }
 
 .heading {
+  @include mq('lg') {
+    grid-column: 1/-1;
+  }
+
   &__title {
-    padding-top: 40px;
+    padding-top: 5vh;
     color: #333;
     text-align: center;
     font-size: 2.7rem;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
   }
 
   &__subtitle {
-    padding-top: 10px;
+    padding-top: 2vh;
     color: #777;
     font-style: italic;
     font-size: 1.2rem;

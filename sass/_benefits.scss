@@ -1,8 +1,26 @@
+@import 'mixins';
+
 .benefits {
+  max-width: 1400px;
+  margin: 0 auto;
+
+  &__list {
+    @include mq('lg') {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5vw;
+    }
+  }
+
   &__item {
     display: grid;
     justify-items: center;
     margin: 40px 0;
+
+    @include mq('lg') {
+      grid-column: span 1;
+      margin: 60px 0;
+    }
   }
 
   &__icon {

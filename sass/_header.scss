@@ -1,31 +1,56 @@
-.header {
-  position: sticky;
-  top: 0;
-  display: grid;
-  background-color: #222;
+@import 'mixins';
 
-  &__logo {
-    display: block;
-    margin: 10px 0 20px 15px;
-    transform: translateY(5px);
-    color: #fed136;
-    font-family: 'Kaushan Script', cursive;
-    font-size: 1.3rem;
-    text-decoration: none;
+.header {
+  &__top {
+    display: grid;
+    justify-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #222;
+
+    @include mq('md') {
+      background: none;
+    }
   }
 
-  &__button {
-    grid-column: 11/12;
-    width: 45px;
-    height: 35px;
-    margin: 10px 0 0 10px;
-    padding-top: 6px;
-    font-size: 1.5rem;
-    text-align: center;
-    background-color: #fed136;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+  &__top-inner {
+    display: grid;
+    width: 100%;
+    max-width: 1400px;
+
+    &__logo {
+      display: block;
+      grid-column: 2 / span 1;
+      align-self: center;
+      color: #fed136;
+      font-family: 'Kaushan Script', cursive;
+      font-size: 1.3rem;
+      text-decoration: none;
+
+      @include mq('md') {
+        font-size: 1.6rem;
+      }
+    }
+
+    &__button {
+      grid-column: 11/12;
+      align-self: center;
+      width: 45px;
+      height: 35px;
+      padding-top: 6px;
+      font-size: 1.5rem;
+      text-align: center;
+      background-color: #fed136;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+
+      @include mq('md') {
+        display: none !important;
+      }
+    }
   }
 }
 
@@ -33,21 +58,107 @@
   position: absolute;
   // top: 55px;
   top: -210px;
-  grid-column: 1/12;
   width: 100%;
-  height: 210px;
   background-color: #222;
   border-top: 1px solid gray;
 
+  @include mq('md') {
+    position: static;
+    align-self: center;
+    grid-column: 9/12;
+    background: none;
+    border: none;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 10px 0;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
   &__link {
     display: block;
+    padding: 10px 30px;
     height: 40px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px 0 0 15px;
-    color: white;
-    text-transform: uppercase;
+    color: #fff;
     text-decoration: none;
-    letter-spacing: 2px;
+
+    @include mq('md') {
+      padding: 10px 0;
+    }
+  }
+}
+
+.welcome {
+  display: grid;
+  gap: 5vh;
+  align-items: center;
+  padding: 10vh 0 5vh 0;
+  background-image: url(../assets/img/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 40% top 35px;
+
+  @include mq('md') {
+    background-position: left 40% center;
+  }
+
+  &__title {
+    color: #fff;
+    font-weight: 400;
+    font-size: 2rem;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-align: center;
+
+    @include mq('md') {
+      font-size: 2.5rem;
+    }
+
+    @include mq('lg') {
+      font-size: 4.5rem;
+    }
+  }
+
+  &__subtitle {
+    color: #fff;
+    font-weight: 900;
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+
+    @include mq('md') {
+      font-size: 4.4rem;
+    }
+
+    @include mq('lg') {
+      font-size: 5.4rem;
+    }
+  }
+
+  &__button {
+    align-self: start;
+    justify-self: center;
+    height: 50px;
+    padding: 0 15px;
+    background-color: #fed136;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include mq('lg') {
+      padding: 15px 40px;
+      font-size: 1.3rem;
+    }
   }
 }
