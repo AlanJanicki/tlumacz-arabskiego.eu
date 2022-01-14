@@ -90,10 +90,12 @@ const setObserverThreshold = () => {
 
   if (viewWidth > 750 && viewHeight > 1000) {
     observer_threshold = 0.75;
-  } else if (viewWidth > 900 && viewHeight > 1300) {
+  }
+  if (viewWidth > 900 && viewHeight > 1300) {
     observer_threshold = 0.9;
-  } else if (viewWidth > 1000 && viewHeight > 500) {
-    observer_threshold = 0.6;
+  }
+  if (viewWidth > 1000 && viewHeight > 500) {
+    observer_threshold = 0.65;
   }
 };
 
