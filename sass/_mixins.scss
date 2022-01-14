@@ -4,6 +4,7 @@ $breakpoints: (
   'lg': 992px,
   'xl': 1200px,
   'xxl': 1400px,
+  'xxxl': 1920px,
 ) !default;
 
 @mixin mq($breakpoint) {
@@ -11,11 +12,5 @@ $breakpoints: (
     @media (min-width: map-get($breakpoints, $breakpoint)) {
       @content;
     }
-  }
-
-  // If the key doesn't exist in the map
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }

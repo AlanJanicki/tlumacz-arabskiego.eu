@@ -1,0 +1,268 @@
+@import 'mixins';
+
+.section {
+  overflow-x: hidden;
+
+  &__image {
+    &--movable-1 {
+      transform: translateX(calc(-1 * var(--movable-item1-offsetLeft)));
+      transition: 0.6s ease-out;
+      visibility: hidden;
+    }
+
+    &--movable-2 {
+      transform: translateX(calc(-1 * var(--movable-item3-offsetLeft)));
+      transition: 0.6s ease-out;
+      @include mq('lg') {
+        transition: 0.6s 0.6s ease-out;
+      }
+      visibility: hidden;
+    }
+
+    &--move {
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  &-inner {
+    display: grid;
+    gap: 5vw;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 5vw;
+    max-width: 1400px;
+
+    &__description {
+      width: 90%;
+
+      &--movable-1 {
+        transform: translateX(var(--movable-item2-offsetLeft));
+        transform-origin: right;
+        transition: 0.6s 0.3s ease-out;
+        visibility: hidden;
+      }
+
+      &--movable-2 {
+        transform: translateX(var(--movable-item4-offsetLeft));
+        transform-origin: right;
+        transition: 0.6s 0.3s ease-out;
+        @include mq('lg') {
+          transition: 0.6s ease-out;
+        }
+        visibility: hidden;
+      }
+
+      &--move {
+        transform: translateX(0);
+        visibility: visible;
+      }
+
+      @include mq('lg') {
+        justify-self: start;
+      }
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      text-align: justify;
+
+      @include mq('xxl') {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__text--strong {
+      font-weight: 700;
+    }
+
+    &__subtitle {
+      margin: 10px 0;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      text-align: justify;
+      text-transform: uppercase;
+    }
+
+    &--info {
+      @include mq('lg') {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+
+  &--dark {
+    background-color: #f7f7f7;
+  }
+
+  &--benefits {
+    padding-bottom: 0;
+  }
+
+  &--contact {
+    padding-bottom: 0;
+    background-color: #222;
+    background-image: url(../assets/img/map-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include mq('xxl') {
+      background-size: contain;
+    }
+  }
+}
+
+.heading {
+  @include mq('lg') {
+    grid-column: 1/-1;
+  }
+
+  &__title {
+    padding-top: 5vw;
+    color: #333;
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    @include mq('xxl') {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__subtitle {
+    padding-top: 2vw;
+    color: #777;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+
+    @include mq('xxl') {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__title--light {
+    color: #fff;
+  }
+}
+
+.benefits {
+  display: grid;
+  margin: 0 auto;
+  gap: 5vw;
+
+  @include mq('lg') {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    display: grid;
+    gap: 3vw;
+    justify-items: center;
+
+    @include mq('lg') {
+      grid-column: span 1;
+    }
+  }
+
+  &__icon {
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
+    border-radius: 50%;
+    color: white;
+    background-color: #fed136;
+    font-size: 4rem;
+    text-align: center;
+    transform: scale(0);
+
+    @include mq('xxl') {
+      width: 150px;
+      height: 150px;
+      padding-top: 30px;
+      font-size: 6rem;
+    }
+
+    &--bounce1 {
+      animation: bounce 0.5s forwards;
+    }
+
+    &--bounce2 {
+      animation: bounce 0.5s 0.5s forwards;
+    }
+
+    &--bounce3 {
+      animation: bounce 0.5s 1s forwards;
+    }
+  }
+
+  &__title {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    font-weight: 900;
+
+    @include mq('xxl') {
+      margin-top: 0;
+      font-size: 1.7rem;
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+    color: #777;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: center;
+
+    @include mq('xxl') {
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.contact {
+  display: grid;
+  align-items: center;
+  gap: 10vw;
+
+  @include mq('lg') {
+    gap: 5vw;
+  }
+
+  &__item {
+    display: grid;
+    gap: 1vw;
+    justify-items: center;
+    align-items: center;
+  }
+
+  &__icon {
+    color: #fff;
+    font-size: 2.8rem;
+    transform: scale(0);
+
+    &--bounce1 {
+      animation: bounce 0.5s forwards;
+    }
+
+    &--bounce2 {
+      animation: bounce 0.5s 0.5s forwards;
+    }
+  }
+
+  &__text {
+    color: #fed136;
+    font-size: 1.2rem;
+  }
+}

@@ -51,7 +51,12 @@
       sizes="180x180"
       href="assets/img/favicons/apple-icon-180x180.png"
     />
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/img/favicons"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -95,35 +100,38 @@
     <header class="header" id="header">
       <div class="header__top">
         <div class="header__top-inner">
-          <a href="#" class="header__top-inner__logo">Tłumacz-arabskiego.eu</a>
+          <a href="#header" class="header__top-inner__logo"
+            >Tłumacz-arabskiego.eu</a
+          >
           <span class="header__top-inner__button fas fa-bars"> </span>
           <nav class="menu">
             <ul class="menu__list">
+              <li class="menu__item--selected"></li>
               <li class="menu__item">
-                <a href="#" class="menu__link">O mnie</a>
+                <a href="#about_me" class="menu__link">O mnie</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Usługi</a>
+                <a href="#services" class="menu__link">Usługi</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Dlaczego ja?</a>
+                <a href="#benefits" class="menu__link">Dlaczego ja?</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Kontakt</a>
+                <a href="#contact" class="menu__link">Kontakt</a>
               </li>
             </ul>
           </nav>
         </div>
       </div>
-      <section class="welcome">
+      <section class="welcome" id="welcome">
         <h1 class="welcome__title">Szukasz tłumacza?</h1>
         <p class="welcome__subtitle">Miło mi cię poznać!</p>
-        <button class="welcome__button">Dowiedz się więcej</button>
+        <a href="#about_me" class="welcome__link">Dowiedz się więcej</a>
       </section>
     </header>
 
-    <section class="info">
-      <div class="info-inner">
+    <section class="section" id="about_me">
+      <div class="section-inner section-inner--info">
         <div class="heading">
           <p class="heading__title">Poznajmy się!</p>
           <p class="heading__subtitle">Kilka słów o mnie.</p>
@@ -131,10 +139,14 @@
         <img
           src="assets/img/adnan.png"
           alt="Adnan Hannan"
-          class="info__image"
+          class="section__image section__image--movable-1"
+          id="movableItem-1"
         />
-        <article class="info-inner__description">
-          <p class="info-inner__text">
+        <article
+          class="section-inner__description section-inner__description--movable-1"
+          id="movableItem-2"
+        >
+          <p class="section-inner__text">
             Nazywam się Adnan Hannan, urodziłem się 15 sierpnia 1965 roku w
             rodzinie kurdyjskiej we wsi Taturo (północna Syria). Język arabski
             oraz kulturę poznałem uczęszczając do lokalnych szkół. Do Polski
@@ -145,15 +157,15 @@
             roku przeprowadziłem się do Warszawy i rozpocząłem studia
             archeologiczne na Uniwersytecie Warszawskim.
           </p>
-          <h2 class="info-inner__subtitle">
+          <h2 class="section-inner__subtitle">
             OD 1998 roku jestem tłumaczem języka arabskiego oraz kurdyjskiego.
           </h2>
         </article>
       </div>
     </section>
 
-    <section class="info info--dark">
-      <div class="info-inner">
+    <section class="section section--dark" id="services">
+      <div class="section-inner section-inner--info">
         <div class="heading">
           <p class="heading__title">Moje usługi</p>
           <p class="heading__subtitle">Czyli co mogę dla Ciebie zrobić.</p>
@@ -161,27 +173,31 @@
         <img
           src="assets/img/tekst.png"
           alt="Tłumaczenie arabskiego"
-          class="info__image"
+          class="section__image section__image--movable-2"
+          id="movableItem-3"
         />
-        <article class="info-inner__description">
-          <h2 class="info-inner__subtitle">
+        <article
+          class="section-inner__description section-inner__description--movable-2"
+          id="movableItem-4"
+        >
+          <h2 class="section-inner__subtitle">
             Oferuję profesjonalne usługi tłumaczeniowe z zakresu języka
             arabskiego oraz kurdyjskiego.
           </h2>
-          <p class="info-inner__text">
+          <p class="section-inner__text">
             Tłumaczenia pisemne oraz ustne. Tłumaczenia pisemne - zwykłe czy
             specjalistyczne nie stanowią dla mnie żadnego problemu. Jestem w
             stanie przetłumaczyć również CV, listy motywacyjne, dokumenty
             księgowe, biznesowe, akta czy nagrania. Dołożę wszelkich starań aby
             sprostać Państwa wymaganiom. Przez wysoki szacunek dla swoich
             klientów -
-            <span class="info-inner__text info-inner__text--strong"
+            <span class="section-inner__text section-inner__text--strong"
               >zapewniam poufność oraz dotrzymuję terminów</span
             >. Łatwy kontakt umożliwia szybką realizację zlecenia. Oprócz
             Warszawy, swoje usługi świadczę również na obszarze całej Polski.
             Pomagam osobom prywatnym oraz firmom.
             <br />
-            <span class="info-inner__text info-inner__text--strong">
+            <span class="section-inner__text section-inner__text--strong">
               Wyceniając swoje usługi staram się zawsze dostosować cenę danego
               tłumaczenia do realnych potrzeb i możliwości Klienta.
             </span>
@@ -194,64 +210,85 @@
       </div>
     </section>
 
-    <section class="benefits">
-      <div class="heading">
-        <h1 class="heading__title">Dlaczego ja?</h1>
-        <h2 class="heading__subtitle">
-          Powody dlaczego to właśnie moją ofertę powinieneś wybrać.
-        </h2>
+    <section class="section section--benefits" id="benefits">
+      <div class="section-inner">
+        <div class="heading">
+          <h1 class="heading__title">Dlaczego ja?</h1>
+          <h2 class="heading__subtitle">
+            Powody, dla których to właśnie moją ofertę powinieneś wybrać.
+          </h2>
+        </div>
+        <ul class="benefits">
+          <li class="benefits__item">
+            <span class="benefits__icon fas fa-users"></span>
+            <h2 class="benefits__title">Doświadczenie</h2>
+            <h3 class="benefits__text">
+              Ponad: 1000 godzin tłumaczeniowych, 200 stron przetłumaczonego
+              tekstu. Setki zadowolonych klientów. Dołącz do nich!
+            </h3>
+          </li>
+          <li class="benefits__item">
+            <span class="benefits__icon fas fa-thumbs-up"></span>
+            <h2 class="benefits__title">Profesjonalizm</h2>
+            <h3 class="benefits__text">
+              Zależy Ci na rzetelnym wykonaniu usługi? Gwarantuję profesjonalne
+              tłumaczenie w wyznaczonym terminie z zachowaniem pełnej poufności!
+            </h3>
+          </li>
+          <li class="benefits__item">
+            <span class="benefits__icon fas fa-dollar-sign"></span>
+            <h2 class="benefits__title">Atrakcyjne ceny</h2>
+            <h3 class="benefits__text">
+              Dokonując wyceny danego tłumaczenia, zawsze uwzględniam Twoje
+              realne potrzeby oraz możliwości. Gwarantuję uczciwą cenę!
+            </h3>
+          </li>
+        </ul>
       </div>
-      <ul class="benefits__list">
-        <li class="benefits__item">
-          <span class="benefits__icon fas fa-users"></span>
-          <h2 class="benefits__title">Doświadczenie</h2>
-          <h3 class="benefits__text">
-            Ponad: 1000 godzin tłumaczeniowych, 200 stron przetłumaczonego
-            tekstu. Setki zadowolonych klientów. Dołącz do nich!
-          </h3>
-        </li>
-        <li class="benefits__item">
-          <span class="benefits__icon fas fa-thumbs-up"></span>
-          <h2 class="benefits__title">Profesjonalizm</h2>
-          <h3 class="benefits__text">
-            Zależy Ci na rzetelnym wykonaniu usługi? Gwarantuję profesjonalne
-            tłumaczenie w wyznaczonym terminie z zachowaniem pełnej poufności!
-          </h3>
-        </li>
-        <li class="benefits__item">
-          <span class="benefits__icon fas fa-dollar-sign"></span>
-          <h2 class="benefits__title">Atrakcyjne ceny</h2>
-          <h3 class="benefits__text">
-            Dokonując wyceny danego tłumaczenia, zawsze uwzględniam Twoje realne
-            potrzeby oraz możliwości. Gwarantuję uczciwą cenę!
-          </h3>
-        </li>
-      </ul>
     </section>
 
-    <section class="contact">
-      <div class="heading">
-        <p class="heading__title heading__title--light">
-          Skontaktuj się ze mną!
-        </p>
-        <p class="heading__subtitle">Chętnie odpowiem na każde Twoje pytanie</p>
+    <section class="section section--contact" id="contact">
+      <div class="section-inner">
+        <div class="heading">
+          <p class="heading__title heading__title--light">
+            Skontaktuj się ze mną!
+          </p>
+          <p class="heading__subtitle">
+            Chętnie odpowiem na każde Twoje pytanie
+          </p>
+        </div>
+        <ul class="contact">
+          <li class="contact__item">
+            <span class="contact__icon fas fa-phone-alt"></span>
+            <p class="contact__text">600 887 972</p>
+          </li>
+          <li class="contact__item">
+            <span class="contact__icon fas fa-envelope"></span>
+            <a href="mailto:adnan.hannan65@gmail.com" class="contact__text"
+              >adnan.hannan65@gmail.com</a
+            >
+          </li>
+        </ul>
       </div>
-      <ul class="contact__list">
-        <li class="contact__item">
-          <span class="contact__icon fas fa-phone-alt"></span>
-          <p class="contact__text">600 887 972</p>
-        </li>
-        <li class="contact__item">
-          <span class="contact__icon fas fa-envelope"></span>
-          <a href="mailto:adnan.hannan65@gmail.com" class="contact__text"
-            >adnan.hannan65@gmail.com</a
-          >
-        </li>
-      </ul>
     </section>
 
     <footer class="footer">
       <p class="footer__text">Copyright © 2022 tlumacz-arabskiego.eu</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"></script>
+    <script src="script.js"></script>
+    <noscript>
+      <style type="text/css">
+        header,
+        section,
+        footer {
+          display: none;
+        }
+      </style>
+      <div class="noscriptmsg">
+        Wygląda na to, że Twoja przeglądarka ma wyłączoną obsługę JavaScript. W
+        celu poprawnego wyświetlenia strony - włącz obsługę JavaScript.
+      </div>
+    </noscript>
   </body>
 </html>
