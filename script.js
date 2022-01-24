@@ -5,18 +5,14 @@ const menu = document.querySelector('.menu');
 const menu_item_selected = document.querySelector('.menu__item--selected');
 const menu_list = document.querySelector('.menu__list');
 const menu_links = document.querySelectorAll('.menu__link');
-const links = document.querySelectorAll(
-  '.menu__link, .header__top-inner__logo, .welcome__link'
-);
+const links = document.querySelectorAll('.menu__link, .header__top-inner__logo, .welcome__link');
 const movableItem1 = document.querySelector('#movableItem-1');
 const movableItem2 = document.querySelector('#movableItem-2');
 const movableItem3 = document.querySelector('#movableItem-3');
 const movableItem4 = document.querySelector('#movableItem-4');
 const sections = document.querySelectorAll('section');
 const section_images = document.querySelectorAll('.section__image');
-const section_descriptions = document.querySelectorAll(
-  '.section-inner__description'
-);
+const section_descriptions = document.querySelectorAll('.section-inner__description');
 const benefitsIcons = document.querySelectorAll('.benefits__icon');
 const contactIcons = document.querySelectorAll('.contact__icon');
 
@@ -56,7 +52,7 @@ const selectedButtonHandler = (selectedButton) => {
     buttonOffsetLeft = button.offsetLeft;
   }
   changeCSSRootStyles([
-    { property: '--menu-item-selected-width', value: `${buttonWidth}px` },
+    { property: '--menu-item-selected-width', value: `${buttonWidth}` },
     {
       property: '--menu-item-selected-offsetLeft',
       value: `${buttonOffsetLeft}px`,
@@ -181,9 +177,7 @@ const menuHandler = () => {
 };
 
 const menuLinkHandler = (e) => {
-  menu_links.forEach((menu_link) =>
-    menu_link.classList.remove('menu__link--active')
-  );
+  menu_links.forEach((menu_link) => menu_link.classList.remove('menu__link--active'));
 
   if (e) {
     const url = e.target.getAttribute('href');
@@ -205,9 +199,7 @@ const linkHandler = (e) => {
 
 menu_button.addEventListener('click', menuHandler);
 
-menu_links.forEach((menu_link) =>
-  menu_link.addEventListener('click', (e) => menuLinkHandler(e))
-);
+menu_links.forEach((menu_link) => menu_link.addEventListener('click', (e) => menuLinkHandler(e)));
 
 links.forEach((link) => link.addEventListener('click', (e) => linkHandler(e)));
 
