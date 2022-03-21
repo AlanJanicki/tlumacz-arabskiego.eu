@@ -3,17 +3,6 @@
 <h2 align="center">tlumacz-arabskiego.eu</h2>
 </div>
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-    </li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
@@ -28,7 +17,7 @@ Single-page website, made with HTML, SASS and vanilla JavaScript. Layout is insp
 
 @ - alan.janicki91@gmail.com
 
-Project Link: [https://github.com/AlanJanicki/space-battle](https://github.com/AlanJanicki/space-battle)
+Project Link: [https://github.com/AlanJanicki/tlumacz-arabskiego.eu](https://github.com/AlanJanicki/tlumacz-arabskiego.eu)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
