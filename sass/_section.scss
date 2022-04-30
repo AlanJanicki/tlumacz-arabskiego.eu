@@ -104,10 +104,18 @@
   &--contact {
     padding-bottom: 0;
     background-color: #222;
-    background-image: url(../assets/img/map-image.png);
+    background-image: url(../assets/img/map-image-sm.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @include mq('md') {
+      background-image: url(../assets/img/map-image-md.png);
+    }
+
+    @include mq('xl') {
+      background-image: url(../assets/img/map-image-xl.png);
+    }
 
     @include mq('xxl') {
       background-size: contain;

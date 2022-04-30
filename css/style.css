@@ -254,24 +254,31 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: calc(5vw + 70px) 0 5vw 0;
-  background-image: url(../assets/img/header-bg.jpg);
+  background-image: url(../assets/img/header-bg-sm.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: left 40% top 35px;
+  background-position: 45% 35px;
 }
 @media (min-width: 768px) {
   .welcome {
+    background-image: url(../assets/img/header-bg-md.jpg);
     background-position: left 40% center;
   }
 }
 @media (min-width: 992px) {
   .welcome {
     padding-bottom: 10vw;
+    background-image: url(../assets/img/header-bg-xl.jpg);
+  }
+}
+@media (min-width: 1400px) {
+  .welcome {
+    background-image: url(../assets/img/header-bg-xxl.jpg);
   }
 }
 @media (min-width: 1920px) {
   .welcome {
-    background-color: #7b7a75;
+    background-color: rgb(123, 122, 117);
     background-size: contain;
   }
 }
@@ -442,10 +449,20 @@ body {
 .section--contact {
   padding-bottom: 0;
   background-color: #222;
-  background-image: url(../assets/img/map-image.png);
+  background-image: url(../assets/img/map-image-sm.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-width: 768px) {
+  .section--contact {
+    background-image: url(../assets/img/map-image-md.png);
+  }
+}
+@media (min-width: 1200px) {
+  .section--contact {
+    background-image: url(../assets/img/map-image-xl.png);
+  }
 }
 @media (min-width: 1400px) {
   .section--contact {
